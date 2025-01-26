@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 10.4 MB, 시간: 0.01 ms
+메모리: 10.2 MB, 시간: 130.41 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 04월 03일 15:48:40
+2025년 01월 26일 15:01:37
 
 ### 문제 설명
 
@@ -41,7 +41,7 @@
 <hr>
 
 <h5>입출력 예</h5>
-<table class="table xt-translated">
+<table class="table">
         <thead><tr>
 <th>s</th>
 <th>result</th>
@@ -64,19 +64,7 @@
 <td>0</td>
 </tr>
 </tbody>
-      <xt-dual class="xt-dual block" xt-origin="s	result
-&quot;[](){}&quot;	3
-&quot;}]()[{&quot;	2
-&quot;[)(]&quot;	0
-&quot;}}}&quot;	0" style="opacity: 0.5; font-size: 16px;" xt-translation="결과
-&quot;[](){}&quot; 3
-&quot;}]()[{&quot; 2
-&quot;[)(]&quot; 0
-&quot;}}}&quot; 0"><xt-br></xt-br><xt-content>결과
-"[](){}" 3
-"}]()[{" 2
-"[)(]" 0
-"}}}" 0</xt-content></xt-dual></table>
+      </table>
 <hr>
 
 <h5>입출력 예 설명</h5>

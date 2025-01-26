@@ -1,32 +1,23 @@
 from collections import deque
-def is_correct(s):
-    a=[]
-    for i in s:
-        if len(a)==0:
-            a.append(i)
-            continue
-        a.append(i)
-        if a[-2] == '(' and a[-1] == ')':
-            a.pop(-1)
-            a.pop(-1)
-        elif a[-2] =='{' and a[-1] =='}':
-            a.pop(-1)
-            a.pop(-1)
-        elif a[-2] =='[' and a[-1]==']':
-            a.pop(-1)
-            a.pop(-1)
-    if len(a)==0:
-        return True
-    else:
-        return False
+
 def solution(s):
     answer = 0
-    tmp=deque(s)
-    for i in range(len(s)):
-        
-        if is_correct(tmp):
+    element_que=deque(list(s))
+    for _ in range(len(s)):
+        stack=[]
+        flag=0
+        for i in element_que:
+            if i=='(' or i=='{' or i=='[':
+                stack.append(i)
+            elif len(stack)==0:
+                flag=1
+                break
+            if (stack[-1] == '(' and i==')') or (stack[-1] == '{' and i=='}') or (stack[-1] == '[' and i==']'):
+                stack.pop()
+        element_que.append(element_que.popleft())
+        if flag==1 or len(stack)>0:
+            continue
+        else:
             answer+=1
-        value=tmp.popleft()
-        tmp.append(value)
     
     return answer
