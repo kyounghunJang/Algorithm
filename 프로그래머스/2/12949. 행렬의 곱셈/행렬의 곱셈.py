@@ -1,13 +1,15 @@
 def solution(arr1, arr2):
+    answer = []
+    arr1_r,arr1_c= len(arr1),len(arr1[0])
+    arr2_r,arr2_c=len(arr2),len(arr2[0])
     
-    r1, c1 = len(arr1), len(arr1[0])
-    r2, c2 = len(arr2), len(arr2[0])
-    
-    answer=[[0]* c2 for _ in range(r1)]
-    
-    for i in range(r1):
-        for j in range(c2):
-            for k in range(c1):
-                answer[i][j]+=arr1[i][k] * arr2[k][j]
+    for i in range(arr1_r):
+        line=[]
+        for j in range(arr2_c):
+            value=0
+            for k in range(arr1_c):
+                value+=arr1[i][k]*arr2[k][j]
+            line.append(value)
+        answer.append(line)
     
     return answer
